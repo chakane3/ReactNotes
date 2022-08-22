@@ -56,4 +56,24 @@ const pokeminMap = pokemon.map((x) => {
 Another way of doing this is by using the map method. Think of how in ios development where we have some json data either locally or via an API. We have to parse through the JSON to fill in our cells. The JS map method will allow us to do the same. 
 
 
+Heres an example of what this may look like.
+
+```javascript
+export default function App() {
+    const peopleElements = People.map(person => {
+        return <Person
+                name={person.name}
+                age={person.age}
+                town={person.town}
+                state={person.state}
+                />
+    })
+    return (
+        <div>
+            {peopleElements}
+        </div>
+    )
+}
+```
+
 
