@@ -114,4 +114,25 @@ function Comment(props) {
 ## Props Are Read-Only
 We do not modify our props inside our components. All react components are "pure" functions with respect to their props. State will be introduced as a workaround this this idea. In short, state allows react components to change their output over time in response to user actions, network responses, and whatever else. 
 
+# Class Components 
+Heres a basic template for a React class component:
+
+```javascript   
+    class HelloWorld extends React.Component {
+        constructor(props) {
+            super(props)
+
+            // the constructor is the only place we can use this.state
+            // in all other methods, we need to use this.setState()
+            this.state = {counter: 0}
+            this.handleClick = this.handleClick.bind(this)
+        }
+        render() {
+            return <h1>Hello, {this.props.name}</h1>
+        }
+    }
+```
+
+Recall, that our constructor is how our class will be inialized. Remember to never use props inside this.state(). The <b>Render</b> method is the only required method inside a class component. The render functions should be "pure" meaning that it doesnt modify component state nor does it interact directly with the browser. ** render() will not be invokes if <b>shouldComponentUpdate()</b> is false.
+
 
