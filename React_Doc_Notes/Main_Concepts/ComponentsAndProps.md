@@ -140,13 +140,22 @@ Recall, that our constructor is how our class will be inialized. Remember to nev
 Props - This refers to the properties being passed into a component in order for it "work". This is similar to how a function get passed arguments. However, a component cannot modify the probs being passed in. Theyre immutable.<br><br>
 State - Refers tp values that are managed by the component. Think of variables declared inside a function. At any time you have changing values that should be saved/displayed, we should be using state.<br>
 
-Heres a basic example of using state in action:
+Heres a basic example of using state in action (note that this is works only for function components):
 
 ```javascript
 export default function App() {
 
     // isImportant is the value our state holds
     const [isImportant, setIsImportant] = React.useState("Yes")
+
+    // 2nd example
+    const = [number, setNumber] React.useState(0)
+    const plusOne = () => {
+        setNumber(number+1)
+    }
+    const minusOne = () => {
+        setNumber(number-1)
+    }
 
     function handleClick() {
         // setIsImportant is the useState function that'll allows us the change our state
@@ -169,22 +178,16 @@ export default function App() {
             <div className="state--value" onClick={isImportant}>
                 <h1>{isImportant}</h1>
             </div>
+
+            // 2nd example 
+            <button classNAme="some-name" onClick={minusOne}>-</button>
+            <div className="counter--count">
+                <h1>{number}</h1>
+            </div>
+            <button className="counter-plus" onClick={plusOne}>+</button>
         </div>
     )
 }
 
 ```
-In this code block. Whenever the user clicks inside div:state--value, the state of our app is changed and React re-renders the page with the update to the value
 
-
-<!-- com.adobe.granite.workflow,version=[1.1,2) -- Cannot be resolved
-com.day.cq.dam.api,version=[1.28,2) -- Cannot be resolved
-com.day.cq.dam.commons.util,version=[1.60,2) -- Cannot be resolved
-com.day.cq.personalization,version=[7.3,8) -- Cannot be resolved
-com.day.cq.wcm.api,version=[1.29,2) -- Cannot be resolved
-com.fasterxml.jackson.databind,version=[2.11,3) -- Cannot be resolved
-org.apache.commons.lang3,version=[3.10,4) -- Cannot be resolved
-org.apache.commons.lang3.time,version=[3.10,4) -- Cannot be resolved
-org.apache.sling.api.resource,version=[2.12,3) -- Cannot be resolved
-org.apache.sling.api.scripting,version=[2.5,3) -- Cannot be resolved
-org.apache.sling.api.servlets,version=[2.3,3) -- Cannot be resolved -->

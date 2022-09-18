@@ -18,8 +18,9 @@ function GetArtworkImg(img_id) {
         return response.blob()
     })
 }
+
 let dataRtn;
-function GetOne(dataRtn) {
+function GetOne() {
     fetch('https://api.artic.edu/api/v1/artworks/?limit=1')
     .then((response) => {
         if(!response.ok) {
@@ -28,7 +29,7 @@ function GetOne(dataRtn) {
         return response.json()
     })
     .then((data) => {
-        return data.data[0].artist_title
+        dataRtn = data.data[0].artist_title
     })
 }
 
@@ -39,7 +40,7 @@ function GetImage(identifier) {
         console.log(json)
     })
 }
-
+GetOne()
 export {Get100Artworks};
 export {GetArtworkImg};
 export {GetOne};
