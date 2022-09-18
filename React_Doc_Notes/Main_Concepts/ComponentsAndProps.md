@@ -174,17 +174,4 @@ export default function App() {
 }
 
 ```
-In this code block. Whenever the user clicks inside div:state--value, the state of our app is changed and React re-renders the page with the update to the value
-
-
-<!-- com.adobe.granite.workflow,version=[1.1,2) -- Cannot be resolved
-com.day.cq.dam.api,version=[1.28,2) -- Cannot be resolved
-com.day.cq.dam.commons.util,version=[1.60,2) -- Cannot be resolved
-com.day.cq.personalization,version=[7.3,8) -- Cannot be resolved
-com.day.cq.wcm.api,version=[1.29,2) -- Cannot be resolved
-com.fasterxml.jackson.databind,version=[2.11,3) -- Cannot be resolved
-org.apache.commons.lang3,version=[3.10,4) -- Cannot be resolved
-org.apache.commons.lang3.time,version=[3.10,4) -- Cannot be resolved
-org.apache.sling.api.resource,version=[2.12,3) -- Cannot be resolved
-org.apache.sling.api.scripting,version=[2.5,3) -- Cannot be resolved
 org.apache.sling.api.servlets,version=[2.3,3) -- Cannot be resolved -->
