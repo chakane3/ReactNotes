@@ -2,8 +2,6 @@
 
 Becuase we can eother use functional or class components in React, theres 2 ways to use state in each option.
 
-## State in Function Components
-
 ### Function Component
 ```javascript
 import React from 'react'
