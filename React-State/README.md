@@ -1,6 +1,6 @@
 # React State
 
-Becuase we can eother use functional or class components in React, theres 2 ways to use state in each option.
+Because we have a choice in using functional or class components in React, theres 2 ways to use state in each option.
 
 ### Function Component
 ```javascript
@@ -21,6 +21,7 @@ export default function Meme() {
 ```
 
 ### Class Component 
+We strongly prefer using class components when implementing state.
 ```javascript
 import { Component } from 'react'
 
@@ -51,3 +52,6 @@ class Hello extends Component {
     }
 }
 ```
+
+## Passing State
+Sibling Components cannot pass state over to eachother. What can only happen is that Your state needs to be stored in a parent component and only the parent can pass data via props. 
