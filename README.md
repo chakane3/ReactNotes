@@ -1,6 +1,6 @@
 # ReactNotes
 
-Here to write notes on using react. <b>
+Here to write notes on using react.
 
 | Files | Summary | Original Projects | Readings |
 | ---------------- | ------------------------------------------- | -------------- | --------------------------- |
