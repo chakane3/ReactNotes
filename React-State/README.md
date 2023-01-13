@@ -1,4 +1,5 @@
 # React State
+Recall, previously that props are data we pass to a component. Props are immutable; passing one to a component to change its value is inefficient. State however allows you to pass data to components which will likely change. <br>
 
 Because we have a choice in using functional or class components in React, theres 2 ways to use state in each option.
 
@@ -10,9 +11,19 @@ export default function Meme() {
     const [memeImage, setMemeImage] = React.useState('img/placeholder')
 
     const getMemeImage = (event) => {
-        // logic to grab a new image from json wether locally or via API endpoint
+        // grab a new image from json locally or via API endpoint
+        setMemeImage(memeImage...path/to /some /img)
         event.preventDefault()
     }
+
+    // Side Note: If we ever need the old value of state to 
+    //            determine the new value of state we can pass 
+    //            functions in setMemeImage.
+    const divideBy8 = () => {
+        setNumber(function(oldValue) {
+            return oldValue / 8;
+        })
+    } 
 
     return (
         // JSX
@@ -39,7 +50,6 @@ class Hello extends Component {
         })
     }
 
-
     render() {
         const {count} = this.state
         return (
@@ -54,4 +64,4 @@ class Hello extends Component {
 ```
 
 ## Passing State
-Sibling Components cannot pass state over to eachother. What can only happen is that Your state needs to be stored in a parent component and only the parent can pass data via props. 
+Sibling Components cannot pass state over to each other. What can only happen is that Your state needs to be stored in a parent component and only the parent can pass data via props. 

@@ -1,9 +1,9 @@
 import React from "react"
 import MemesData from "../MemesData"
-
+import placeholder from "./Images/placeholder.png"
 export default function Meme() {
 
-    const [memeImage, setMemeImage] = React.useState("img/placeholder")
+    const [memeImage, setMemeImage] = React.useState(placeholder)
 
     // function to grab an img url from MemeData.js
     const getMemeImage = (event) => {

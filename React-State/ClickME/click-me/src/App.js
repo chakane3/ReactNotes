@@ -11,7 +11,8 @@ class App extends React.Component {
     }
   }
 
-  btnPressed = () => {
+  // event handler which changes our state
+  btnPressedAdd = () => {
     // reading from state
     let counter = this.state.counter;
 
@@ -21,14 +22,22 @@ class App extends React.Component {
     })
 
   }
+
+  btnPressedMinus = () => {
+    let counter = this.state.counter
+    this.setState({
+      counter: counter - 1
+    })
+  }
   
   render() {
-  
-    let aCount = this.state.counter
+    let {counter} = this.state
+
     return (
       <div className="App">
-        <p>{aCount}</p>
-        <button onClick={this.btnPressed}>Click Me!</button>
+        <p>{counter}</p>
+        <button onClick={this.btnPressedAdd}>Plus +1</button>
+        <button onClick={this.btnPressedMinus}>Minus -1</button>
       </div>
     )
   }
